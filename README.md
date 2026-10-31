@@ -1,33 +1,34 @@
-![Static Badge](https://img.shields.io/badge/author-javiergs-orange) <a href="https://plugins.jetbrains.com/plugin/31858">
-  <img src="https://img.shields.io/badge/JetBrains-Install%20Plugin-blue">
-</a>
-
-
 # P-Code VM
 
-Educational P-Code Virtual Machine and Debugger plugin for IntelliJ IDEA.
-P-Code VM helps students learn compiler construction, intermediate code generation, stack machines, recursion, frames, and runtime execution through an interactive IntelliJ plugin.
+P-Code VM is an educational virtual machine and debugger plugin for IntelliJ IDEA. It helps students explore compiler-generated intermediate code, stack-based execution, method calls, and recursion.
+
+[Install P-Code VM from the JetBrains Marketplace](https://plugins.jetbrains.com/plugin/31858)
 
 ## Features
 
-- P-Code syntax highlighting
-- Step-by-step VM execution
-- Register stack visualization
-- Symbol table inspection
-- Call stack tracking
-- Runtime frames
-- Method calls and recursion
-- Return value support
-- P-Code editor integration for IntelliJ IDEA
+- P-Code syntax highlighting for `.pcode` files
+- Execute P-Code programs from the editor
+- Step through execution one instruction at a time
+- Inspect the operand stack, symbol table, call stack, and runtime frames
+- Explore method calls, recursion, and return values
 
-## Screenshots
+## Preview
 
-### Step-by-Step Execution and Runtime Visualization
-![Execution](screenshots/execution.png)
+![P-Code execution and runtime visualization](screenshots/execution.png)
 
-## Example
+## Getting Started
 
-### Recursive Factorial
+1. Install **P-Code VM** from the [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/31858) in IntelliJ IDEA.
+2. Create or open a file with the `.pcode` extension.
+3. Add a P-Code program, such as the example below.
+4. Right-click in the editor and select **Execute P-Code** to run the program, or **Step P-Code** to advance instruction by instruction.
+5. Use the **P-Code Console** tool window to inspect execution and runtime state.
+
+The editor actions also have default shortcuts: **F5** for execution and **F10** for stepping. Shortcut availability may depend on your IDE keymap.
+
+## Example: Recursive Factorial
+
+This P-Code program computes the factorial of 5:
 
 ```text
 factorial-int,method,global,1
@@ -55,77 +56,18 @@ OPR 21,0
 OPR 0,0
 ```
 
-Output:
+Expected output:
 
 ```text
 120
 ```
 
-## Included Components
-
-### Virtual Machine
-
-The VM supports:
-
-- `LIT`
-- `LOD`
-- `STO`
-- `JMP`
-- `JMC`
-- `CAL`
-- `OPR`
-
-including arithmetic, logical operations, comparisons, method calls, recursion, and returns.
-
-
-## Runtime Model
-
-The VM uses:
-
-- Operand stack (`register_zero`)
-- Runtime frames (`Stack<Frame>`)
-- Return address stack (`Stack<Integer> returnAddresses`)
-
-This architecture allows recursive execution and nested method calls.
-
-
-## Built With
-
-- Java
-- IntelliJ Platform SDK
-- Gradle
-
-
-## Plugin Actions
-
-- **Execute P-Code**
-- **Step P-Code**
-
-Accessible directly from the IntelliJ editor context menu.
-
-
-## Educational Goals
-
-This project was designed as an educational tool for compiler and virtual machine courses, demonstrating:
-
-- intermediate code execution
-- stack-based computation
-- runtime environments
-- activation records
-- recursion
-- compiler-generated P-Code
-
 ## Documentation
 
-- [Instruction Set](docs/instruction-set.md)
-- [Runtime Model](docs/runtime-model.md)
-- [Sample Programs](docs/sample-programs.md)
+- [Instruction Set](docs/instruction-set.md) — P-Code instructions and their meaning
+- [Runtime Model](docs/runtime-model.md) — How program execution and runtime state work
+- [Sample Programs](docs/sample-programs.md) — Additional examples for learning and experimentation
 
-  
-## Status
+## Educational Use
 
-Current plugin version: 1.0.2 (as declared in `gradle.properties` and `plugin.xml`).
-
-The IntelliJ integration source is public. The P-Code VM implementation is maintained separately and supplied to the plugin build as a compiled, obfuscated JAR. The VM source is not included in this repository.
-
-The Gradle build expects `libs/pcode-vm-1.0.2-obfuscated.jar`. A clean checkout does not include that binary; maintainers must supply the authorized dependency before building. Do not commit the original, unobfuscated VM JAR or its source.
+P-Code VM is intended for compiler construction and programming language courses. It provides a way to observe how intermediate instructions are executed, how calls and returns work, and how recursion affects runtime state.
