@@ -1,20 +1,16 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
-
+about: Suggest an improvement to the P-Code VM IntelliJ plugin
+title: ""
+labels: enhancement
+assignees: ""
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+### Learning or usability need
+What would this improvement help students or instructors do?
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+### Proposed behavior
+Describe the feature from the user's perspective.
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
+### Example or alternative
+Provide an example or an alternative approach, if helpful.
