@@ -117,11 +117,15 @@ This project was designed as an educational tool for compiler and virtual machin
 
 ## Documentation
 
-- [Instruction Set](instruction-set.md)
-- [Runtime Model](runtime-model.md)
-- [Sample Programs](sample-programs.md)
+- [Instruction Set](docs/instruction-set.md)
+- [Runtime Model](docs/runtime-model.md)
+- [Sample Programs](docs/sample-programs.md)
 
   
 ## Status
 
-Version 1.0 Educational Release.
+Current plugin version: 1.0.2 (as declared in `gradle.properties` and `plugin.xml`).
+
+The IntelliJ integration source is public. The P-Code VM implementation is maintained separately and supplied to the plugin build as a compiled, obfuscated JAR. The VM source is not included in this repository.
+
+The Gradle build expects `libs/pcode-vm-1.0.2-obfuscated.jar`. A clean checkout does not include that binary; maintainers must supply the authorized dependency before building. Do not commit the original, unobfuscated VM JAR or its source.
