@@ -2,5 +2,7 @@
 .idea
 .intellijPlatform
 build
-/src/
 .DS_Store
+
+# Private VM binaries (not part of the public source repository)
+/libs/*.jar
