@@ -1,5 +1,9 @@
 # P-Code VM
 
+![Java 21+](https://img.shields.io/badge/Java-21%2B-blue)
+![Version 1.0.2](https://img.shields.io/badge/version-1.0.2-green)
+[![JetBrains Marketplace](https://img.shields.io/badge/JetBrains-Marketplace-purple)](https://plugins.jetbrains.com/plugin/31858)
+
 P-Code VM is an educational virtual machine and debugger plugin for IntelliJ IDEA. It helps students explore compiler-generated intermediate code, stack-based execution, method calls, and recursion.
 
 [Install P-Code VM from the JetBrains Marketplace](https://plugins.jetbrains.com/plugin/31858)
